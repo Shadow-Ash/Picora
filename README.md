@@ -22,7 +22,7 @@ Users paste a tweet, choose a style preset, and Picora generates a matching AI i
 
 ## 🧠 How Picora Works
 
-
+```
 User Tweet
     ↓
 Prompt Compiler
@@ -36,7 +36,7 @@ Model Router
 Gemini Image Generation
     ↓
 Image Returned to UI
-
+```
 
 ---
 
@@ -73,21 +73,25 @@ http://localhost:3000
 ```
 
 ### Model Usage Flow
-
+```
 Primary Model
     gemini-3-pro-image-preview      (Nano Banana Pro)
 
 Fallback Models
     gemini-2.5-flash-image          (Nano Banana)
     gemini-3.1-flash-image          (Fallback)
-
+```
 The model router automatically switches models if the primary model hits quota limits.
+
+---
 
 ## 🎨 Style Presets
 
 Picora allows users to control the visual style of generated images.
 
 The selected preset is injected into the prompt before sending it to the image model.
+
+---
 
 ### Supported Presets
 
@@ -98,9 +102,9 @@ Anime
 Realistic  
 Illustration
 
+---
 
-
-# 👨‍💻 Author
+### 👨‍💻 Author
 
 Built by Shadow Ash
 
