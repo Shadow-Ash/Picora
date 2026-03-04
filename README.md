@@ -49,8 +49,6 @@ Image Returned to UI
 
 # ⚙️ Installation
 
-## 1️⃣ Clone the repository
-
 ```bash
 git clone https://github.com/Shadow-Ash/picora.git
 cd picora
