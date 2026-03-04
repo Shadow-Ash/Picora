@@ -45,97 +45,87 @@ Image Returned to UI
 - **Tailwind CSS**
 - **Google Gemini API**
 - **TypeScript**
-- **App Router API routes**
-- 
+- **App Router API routes** 
 
 # ⚙️ Installation
 
 ## 1️⃣ Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/picora.git
+git clone https://github.com/Shadow-Ash/picora.git
 cd picora
-2️⃣ Install dependencies
 npm install
-3️⃣ Create environment file
 
 Create a file:
 
 .env.local
 
-Add your Gemini API key:
+Add your Gemini API key like below
 
-GEMINI_API_KEY=your_gemini_api_key_here
-
-Environment variables keep your API key secure and prevent it from being committed to the repository.
-
-4️⃣ Get a Gemini API Key
-
-Go to Google AI Studio
-
-Generate an API key
-
-Paste it into .env.local
-
-Example:
+GEMINI_API_KEY=your_gemini_api_key_here (make sure you activate the billing account of your api key and check the rate limits of Nano Banana)
 
 GEMINI_API_KEY=AIzaSyXXXXX
-5️⃣ Run the development server
+
 npm run dev
 
-Open:
-
 http://localhost:3000
-🎨 Style Presets
 
-Picora supports different visual styles:
+```
+
+## Architecture
+
+Picora converts text into visuals using a structured AI generation pipeline.
+
+User Input (Tweet)
+        ↓
+Prompt Compiler
+        ↓
+Style Preset Engine
+        ↓
+Model Router
+        ↓
+Gemini Image Models
+        ↓
+Image Parser
+        ↓
+Frontend Result
+
+### Model Usage Flow
+
+Primary Model
+    gemini-3-pro-image-preview   (Nano Banana Pro)
+
+Fallback Models
+    gemini-2.5-flash-image       (Nano Banana)
+    gemini-3.1-flash-image       (Fallback)
+
+The model router automatically switches models if the primary model hits quota limits.
+
+## Style Presets
+
+Picora allows users to control the visual style of generated images.
+
+The selected preset is injected into the prompt before sending it to the image model.
+
+Supported presets:
 
 Auto
-
 Cinematic
-
 Cyberpunk
-
 Anime
-
 Realistic
-
 Illustration
 
-These styles are injected into the AI prompt before image generation.
+Example Flow
 
-📸 Demo
+User Tweet
+"coding late at night with coffee"
 
-Add screenshots here for GitHub:
+Preset
+Cyberpunk
 
-/screenshots/app.png
-/screenshots/generation.png
-
-Example:
-
-![Picora App](./screenshots/app.png)
-🔐 Security
-
-API keys are stored in .env.local
-
-.env.local should never be committed to GitHub
-
-Add this to .gitignore:
-
-.env.local
-🚀 Future Improvements
-
-Image history gallery
-
-Prompt editing
-
-Image upscaling
-
-Social sharing
-
-Authentication
-
-Prompt templates
+Compiled Prompt
+"coding late at night with coffee, neon lights, cyberpunk city atmosphere, futuristic lighting"
 
 👨‍💻 Author
 
