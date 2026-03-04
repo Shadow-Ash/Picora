@@ -24,15 +24,17 @@ Users paste a tweet, choose a style preset, and Picora generates a matching AI i
 
 
 User Tweet
-↓
+    ↓
 Prompt Compiler
-↓
+    ↓
 Style Preset Engine
-↓
-Gemini Prompt Generation
-↓
-Gemini Image Model (Nano Banana Pro)
-↓
+    ↓
+Prompt Enhancement
+    ↓
+Model Router
+    ↓
+Gemini Image Generation
+    ↓
 Image Returned to UI
 
 
@@ -70,62 +72,35 @@ http://localhost:3000
 
 ```
 
-## Architecture
-
-Picora converts text into visuals using a structured AI generation pipeline.
-
-User Input (Tweet)
-        ↓
-Prompt Compiler
-        ↓
-Style Preset Engine
-        ↓
-Model Router
-        ↓
-Gemini Image Models
-        ↓
-Image Parser
-        ↓
-Frontend Result
-
 ### Model Usage Flow
 
 Primary Model
-    gemini-3-pro-image-preview   (Nano Banana Pro)
+    gemini-3-pro-image-preview      (Nano Banana Pro)
 
 Fallback Models
-    gemini-2.5-flash-image       (Nano Banana)
-    gemini-3.1-flash-image       (Fallback)
+    gemini-2.5-flash-image          (Nano Banana)
+    gemini-3.1-flash-image          (Fallback)
 
 The model router automatically switches models if the primary model hits quota limits.
 
-## Style Presets
+## 🎨 Style Presets
 
 Picora allows users to control the visual style of generated images.
 
 The selected preset is injected into the prompt before sending it to the image model.
 
-Supported presets:
+### Supported Presets
 
-Auto
-Cinematic
-Cyberpunk
-Anime
-Realistic
+Auto  
+Cinematic  
+Cyberpunk  
+Anime  
+Realistic  
 Illustration
 
-Example Flow
 
-User Tweet
-"coding late at night with coffee"
 
-Preset
-Cyberpunk
-
-Compiled Prompt
-"coding late at night with coffee, neon lights, cyberpunk city atmosphere, futuristic lighting"
-
-👨‍💻 Author
+# 👨‍💻 Author
 
 Built by Shadow Ash
 
