@@ -46,37 +46,7 @@ Image Returned to UI
 - **Google Gemini API**
 - **TypeScript**
 - **App Router API routes**
-
----
-
-## 📂 Project Structure
-
-
-src
-│
-├── app
-│ ├── api
-│ │ └── generate
-│ │ └── route.ts
-│ └── page.tsx
-│
-├── components
-│ └── workspace
-│ ├── TweetInput.tsx
-│ ├── ImagePreview.tsx
-│ ├── ActionBar.tsx
-│ └── StyleSelector.tsx
-│
-├── lib
-│ └── ai
-│ ├── geminiClient.ts
-│ ├── imageParser.ts
-│ ├── modelRouter.ts
-│ ├── promptCompiler.ts
-│ └── styles.ts
-
-
----
+- 
 
 # ⚙️ Installation
 
@@ -176,41 +146,4 @@ Visualize Your Voice.
 
 If you like this project, consider starring the repo!
 
-
 ---
-
-# 📌 Also Add `.gitignore`
-
-Make sure your repo contains:
-
-
-.env.local
-node_modules
-.next
-
-
----
-
-# ⭐ Pro Tip (Important for GitHub)
-
-Before pushing:
-
-Run:
-
-
-git add .
-git commit -m "Initial commit - Picora AI image generator"
-git push
-
-
----
-
-# 🚀 If you want, I can also help you add
-
-- **A beautiful GitHub banner**
-- **Project demo GIF**
-- **Repo badges (Next.js / AI / Gemini)**
-- **Architecture diagram**
-
-These make the project look **10x more impressive for recruiters.**
-::contentReference[oaicite:2]{index=2}
