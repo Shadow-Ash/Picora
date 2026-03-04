@@ -1,36 +1,216 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Picora — Visualize Your Voice ✨
 
-## Getting Started
+Picora is an AI-powered web app that converts tweets or text into visual images using Google's Gemini models.
 
-First, run the development server:
+Users paste a tweet, choose a style preset, and Picora generates a matching AI image.
+
+---
+
+## 🚀 Features
+
+- ✏️ Paste a tweet or text
+- 🎨 Style presets (Cinematic, Cyberpunk, Anime, etc.)
+- 🤖 AI prompt generation
+- 🖼️ Image generation via Gemini models
+- 🔄 Regenerate images
+- ⬇️ Download generated image
+- 📋 Copy generated prompt
+- 🌙 Dark mode UI
+- ⚡ Optimized Next.js architecture
+
+---
+
+## 🧠 How Picora Works
+
+
+User Tweet
+↓
+Prompt Compiler
+↓
+Style Preset Engine
+↓
+Gemini Prompt Generation
+↓
+Gemini Image Model (Nano Banana Pro)
+↓
+Image Returned to UI
+
+
+---
+
+## 🛠 Tech Stack
+
+- **Next.js 16**
+- **React**
+- **Tailwind CSS**
+- **Google Gemini API**
+- **TypeScript**
+- **App Router API routes**
+
+---
+
+## 📂 Project Structure
+
+
+src
+│
+├── app
+│ ├── api
+│ │ └── generate
+│ │ └── route.ts
+│ └── page.tsx
+│
+├── components
+│ └── workspace
+│ ├── TweetInput.tsx
+│ ├── ImagePreview.tsx
+│ ├── ActionBar.tsx
+│ └── StyleSelector.tsx
+│
+├── lib
+│ └── ai
+│ ├── geminiClient.ts
+│ ├── imageParser.ts
+│ ├── modelRouter.ts
+│ ├── promptCompiler.ts
+│ └── styles.ts
+
+
+---
+
+# ⚙️ Installation
+
+## 1️⃣ Clone the repository
 
 ```bash
+git clone https://github.com/YOUR_USERNAME/picora.git
+cd picora
+2️⃣ Install dependencies
+npm install
+3️⃣ Create environment file
+
+Create a file:
+
+.env.local
+
+Add your Gemini API key:
+
+GEMINI_API_KEY=your_gemini_api_key_here
+
+Environment variables keep your API key secure and prevent it from being committed to the repository.
+
+4️⃣ Get a Gemini API Key
+
+Go to Google AI Studio
+
+Generate an API key
+
+Paste it into .env.local
+
+Example:
+
+GEMINI_API_KEY=AIzaSyXXXXX
+5️⃣ Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+http://localhost:3000
+🎨 Style Presets
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Picora supports different visual styles:
 
-## Learn More
+Auto
 
-To learn more about Next.js, take a look at the following resources:
+Cinematic
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Cyberpunk
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Anime
 
-## Deploy on Vercel
+Realistic
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Illustration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+These styles are injected into the AI prompt before image generation.
+
+📸 Demo
+
+Add screenshots here for GitHub:
+
+/screenshots/app.png
+/screenshots/generation.png
+
+Example:
+
+![Picora App](./screenshots/app.png)
+🔐 Security
+
+API keys are stored in .env.local
+
+.env.local should never be committed to GitHub
+
+Add this to .gitignore:
+
+.env.local
+🚀 Future Improvements
+
+Image history gallery
+
+Prompt editing
+
+Image upscaling
+
+Social sharing
+
+Authentication
+
+Prompt templates
+
+👨‍💻 Author
+
+Built by Shadow Ash
+
+Visualize Your Voice.
+⭐ Support
+
+If you like this project, consider starring the repo!
+
+
+---
+
+# 📌 Also Add `.gitignore`
+
+Make sure your repo contains:
+
+
+.env.local
+node_modules
+.next
+
+
+---
+
+# ⭐ Pro Tip (Important for GitHub)
+
+Before pushing:
+
+Run:
+
+
+git add .
+git commit -m "Initial commit - Picora AI image generator"
+git push
+
+
+---
+
+# 🚀 If you want, I can also help you add
+
+- **A beautiful GitHub banner**
+- **Project demo GIF**
+- **Repo badges (Next.js / AI / Gemini)**
+- **Architecture diagram**
+
+These make the project look **10x more impressive for recruiters.**
+::contentReference[oaicite:2]{index=2}
